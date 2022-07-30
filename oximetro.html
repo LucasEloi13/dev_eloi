@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projeto Oxímetro</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Portfólio</strong> de Projetos</a>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Sistema de Monitoramento para Oxímetros de Pulso Utilizando Internet das Coisas</h1>
+									</header>
+
+									<!--<iframe width="800	" height="450" src="https://www.youtube.com/embed/FpdGG5FnGKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+									<!--<span class="image"><img width="70%" src="images/efit.png" alt="" usemap="#shape"/></span>-->
+									<!--<iframe width="800	" height="450" src="https://www.youtube.com/embed/BV4KaDkZ8lM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+									
+									<p>
+
+									</p>
+									<p>
+										Este projeto propõe a aplicação da Internet das Coisas, na área do eFitnnes, para obter um melhor acompanhamento das atividades físicas, através de um monitoramento da quantidade de oxigênio no sangue e freqüência cardíaca a um baixo custo e de forma não invasiva. Utilizando os métodos atualmente aplicados nas academias utiliza-se um dispositivo que realiza a telemetria dos dados cardíacos durante a realização do exercício mapeando as zonas de treinamento do paciente em cada exercício aplicado e estimando os resultados de cada sessão de treino. O dispositivo se conecta a um servidor por meio de uma rede sem fio que faz a medida da saturação de oxigênio no sangue e batimentos cardíacos de maneira não invasiva, permitindo o fornecimento de informação e atenção médica à pacientes localizados à distância.
+									</p>
+
+									<hr class="major" />
+
+									<h2>Problemática e  Justificativa</h2>
+									<p>
+										O protótipo proposto possui procedimentos e técnicas aplicados especificamente na área de e-Health, conceito que define as relações entre tecnologias da informação e comunicação no âmbito da saúde. O protocolo de comunicação implementado é o MQTT.
+										
+									</p>
+									<p>
+										A criação de um sistema de monitoramento foi pensado a partir da limitação dos dispositivos disponíveis no mercado que são tecnologias fechadas onde os dados podem ser utilizados apenas pelos detentores da tecnologia e pelo usuário do dispositivo que armazena estes dados em um smartphone ou em nuvem. O sistema desenvolvido utilizando tecnologias de baixo custo coleta dos dados mantendo salvo em um banco de dados, podendo receber dados através de uma rede local ou de uma rede remota através da internet. a estrutura de rede utilizada permite utilizar soluções de fornecedores diferentes se adaptando as necessidades do usuário. Os dispositivos smartfitness disponíveis no mercado utilizam um smartphone como intermediário que realiza o armazenamento local dos dados coletados pelo dispositivo ou envia os dados para a nuvem. Estes dados são coletados pelo smartphone através de uma conexão Bluetooth onde os dados são trocados de forma proprietária, onde a falta de acesso a estrutura de dados dificulta a utilização destes dispositivos em outras aplicações.
+									</p>
+
+									<p>
+										A partir da dificuldade de utilizar os dispositivos disponíveis no mercado foi necessário criar um dispositivo com algumas características para manter o custo baixo e a praticidade do uso como a eliminação do smartphone como intermediário na captura de dados e realizar o armazenamento das informações em banco de dados remoto, eliminando o armazenamento interno no dispositivo. A partir disto, pensou-se em um sistema de gerenciamento que realizasse a coleta dos dados para posteriormente fazer a análise dos mesmos e assim otimizar os resultados obtidos.
+									</p>
+
+									<p>
+										O presente trabalho propõe a aplicação da Internet das Coisas na área da saúde utilizando os métodos atualmente aplicados nas academias, onde um dispositivo realiza a leitura e telemetria dos dados cardíacos durante a realização do exercício mapeando as zonas de treinamento do paciente em cada exercício aplicado e estimando os resultados de cada sessão de treino, através do monitoramento da quantidade de oxigênio no sangue e da frequência cardíaca. Desta forma obtêm-se um melhor acompanhamento das atividades físicas a baixo custo e de maneira não evasiva
+									</p>
+									<hr class="major" />
+
+								<hr class="major">
+									<h2> Funcionamento</h2>
+									<p>
+										A obtenção dos dados é realizada através de um sensor óptico para medição de oxigenação sanguínea. 
+									</p>
+									<p> 
+										A comunicação do dispositivo é realizada por um módulo ESP8266-01, através de uma rede Wi-Fi conectada à internet. O módulo possui tamanho reduzido e realiza toda a operação de conexão, recebendo os dados do microcontrolador STM e enviando estes dados codificados em JSON, através do protocolo MQTT.
+									</p>
+									<p>
+										A partir dos dados obtidos é possível mensurar a quantidade de tempo exercitado nas zonas alvo de treinamento desta forma pode-se estimar o melhor aproveitamento de cada exercício, tendo em vista que através desta contagem têmse uma média que quais zonas de treinamento o paciente trabalha com mais frequência durante determinado exercício.
+									</p>
+
+									<p> 
+										<span class="image object"> <img width="100%" src="images/efit.png" alt="" usemap="#shape"/></span><br>
+									</p>
+
+									<p>
+										O software obtém os dados através da internet durante a execução de uma sessão, exibindo os dados através da interface gráfica, onde são exibidos os dados sobre a zona alvo dos batimentos cardíacos obtidos e o tempo total da sessão.
+									</p>
+
+									<p>
+										Os dados
+										ficam armazenados em um banco de dados MySQL, para serem recuperados
+										posteriormente permitindo visualizar os relatórios de sessões anteriores e utilizar os
+										dados em outras aplicações. 
+									</p>
+									
+								<hr class="major" />
+
+								</section>
+
+						</div>
+					</div>
+
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

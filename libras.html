@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Projeto TLibras</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Portfólio</strong> de Projetos</a>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Ferramenta computacional para interação na comunicação com Libras</h1>
+									</header>
+
+									<span class="image main"><img src="images/libras3.png" alt="" /></span>
+									<!--<iframe width="800	" height="450" src="https://www.youtube.com/embed/BV4KaDkZ8lM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+									
+
+									<p>
+										Você já passou por alguma situação de não poder se comunicar com uma pessoa surda por não saber Libras? <br>	
+										Essa é uma dor muito frequente na faculdade a qual frequento, há diversos alunos surdos que muitas vezes 
+										estão sem intérprete, impossiblitando a comunicação com os mesmos.
+									</p>
+									<p>
+										Foi pensando nisso que decidi desenvolver uma ferramenta capaz de traduzir os sinais de Libras para o português. Para que seja
+										acessível todos, é muito importante que sejam usadas apenas ferramentas que qualquer pessoa possua em casa, como um notebook/computador com webcam ou um celular. 
+									</p>
+
+									<p>
+										Vídeo do projeto sendo utilizado po surdos na Expo Indústria 2022: <br>
+										<iframe width="800	" height="450" src="https://www.youtube.com/embed/BV4KaDkZ8lM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</p>
+									<hr class="major" />
+
+									<h2>Funcionamento</h2>
+									<p>
+										A ideia principal do projeto desenvolvido trata-se da captação dos pontos-chave da mão quando um sinal de Libras for feito e armazena-los em um arquivo
+										.CSV que será usado para treinar uma rede neural capaz de reconhecer pontos-chave e classificá-los.
+									
+										<br> <span class="image object"> <img width="65%" src="images/pontos.png" alt="" usemap="#shape"/></span><br>
+									</p>
+									
+									<p>
+										Para captar os dados, foi criado um programa no qual a pessoa faz um sinal de mão e aperta um botão do teclado
+										para armazenar os dados. A primeira coluna armazena o número usado como ID de classe, as colunas subsequentes armazaenam as coordenadas do ponto-chave.
+
+										<span class="image object"> <img width="100%" src="images/dados.png" alt="" usemap="#shape"/></span><br>
+
+										É importante lembrar que a normalização dos dados é um ponto crucial para o funcionamento do nosso modelo. Como serão assimiladas as coordenadas 
+										relativas à resolução do vídeo captado, o mesmo sinal feito em pontos diferentes da tela serão coisas completamente diferentes, com a normalização 
+										buscamos manter os valores entre -1 e 1 e assim padronizar o sinal independente do lugar que esteja na tela. 
+									</p>
+									
+									
+									<hr class="major" />
+
+									<h2>Estrutura do Modelo</h2>
+									<p>
+										Imagem do modelo preparado neste projeto é a seguinte: 
+										<span class="image object"> <img width="80%" src="images/keypoint_classifier.png" alt="" usemap="#shape"/></span><br>
+
+									</p>
+
+									<hr class="major" />
+
+									<h2>Precisão</h2>
+									<p>
+										Matriz de confusão do algorítmo de classificação desenvolvido: <br>
+										<span class="image object"> <img width="100%" src="images/confusion matrix.png" alt="" usemap="#shape" vsspace="100" hspace="100"/></span> <br>
+										É notório que há um bom desempenho na classificação dos sinais treinados, até mesmo no muito semelhantes como "T" e "F".
+									</p>
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
